@@ -4,13 +4,17 @@ header {
   height: 100px;
   align-items: center;
   padding-left: 10%;
-  border-bottom:5px solid black;
+  border-bottom:2px solid black;
 }
-.botan{
-    gap: 10px;
-    display: flex;
 
-}
  .logo {
   margin-right: auto;
  }
+ .botan {
+  margin-left: 1rem;
+}
+
+#site-search {
+  font-size: 16px;
+  padding: 0.5em;
+}
