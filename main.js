@@ -1,10 +1,8 @@
-// main.js
-document.addEventListener("DOMContentLoaded", () => {
-  const button = document.querySelector("button");
-  const input = document.getElementById("site-search");
+addEventListener("DOMContentLoaded", () => {
+    const search = document.querySelector('#search');
+    const kensaku = document.querySelector("#search_text");
 
-  button.addEventListener("click", () => {
-    const keyword = input.value.trim();
-    alert("検索されたタイトル: " + keyword);
-  });
+    search.addEventListener('click', () => {
+        alert(`${kensaku.value}が入力されました`);
+      });
 });

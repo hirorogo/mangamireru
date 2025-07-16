@@ -4,20 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/styles/main.css" />
+    <title>Books</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <script src="main.js" defer></script>
+
 <body>
 
     <header>
         <img src="Frame_24.jpeg" class="logo">
         <p>本を読めるよ！</p>
-        <label for="site-search">タイトル:</label>
-        
-        <input type="search" id="site-search" name="q" />
+        <label for="search_text">タイトル:</label>
+
+        <input type="search" id="search_text" name="q" />
         <div class="botan">
-        <button>Search</button>
+            <button id="search">Search</button>
         </div>
 
     </header>
