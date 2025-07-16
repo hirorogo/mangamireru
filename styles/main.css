@@ -1,0 +1,61 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #EDEDED;
+    padding: 5px 0px;
+}
+
+.logo {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.catch {
+    font-weight: bold;
+}
+
+.header_navigations {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.search_box {
+    position: relative;
+}
+
+.search_box > .font_search {
+    position: absolute;
+    left: 13px;
+    top: 50%;
+    width: 25px;
+    height: 25px;
+    color: #000000;
+    transform: translateY(-50%);
+    margin-bottom: 1px;
+}
+
+#search_text {
+    border-radius: 9999px;
+    padding: 7px 17px;
+    padding-left: 45px;
+    background: #f1f1f1;
+    color: #000000;
+}
+
+#search {
+    border-radius: 9999px;
+    padding: 7.5px 17px;
+    background: #000000;
+    color: #ffffff;
+}
