@@ -59,3 +59,8 @@ header {
     background: #000000;
     color: #ffffff;
 }
+
+#result_list {
+    /* とりま */
+    margin-top: 100px;
+}
