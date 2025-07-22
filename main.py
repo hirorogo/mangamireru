@@ -12,25 +12,19 @@ app = FastAPI(default_response_class=ORJSONResponse)
 app.mount("/books", StaticFiles(directory="books", html=True), name="static")
 app.mount("/styles", StaticFiles(directory="styles"), name="styles")
 app.mount("/scripts", StaticFiles(directory="scripts"), name="scripts")
-app.mount("/", StaticFiles(directory=".", html=True), name="root")  # ←一番最後# index.html
 @app.get("/")
 async def index():
     return FileResponse("index.html")
 
-
-# search.js
-@app.get("/search.js")
-async def searchJS():
-    return FileResponse("search.js")
-
-
 # 本の一覧
 @app.get("/list-books")
 async def booksList():
-    books_dir = "books"
+    books_dir = "./books"
     if not os.path.exists(books_dir):
         raise HTTPException(404, "Books directory not found")
     files = [f for f in os.listdir(books_dir) if f.endswith(".pdf")]
+    books = []
+    for file in files:
     return files
 
 
@@ -44,7 +38,6 @@ async def pdfjs(request: Request, path: str):
     else:
         contentType = None
     return FileResponse(f"pdfjs/{path}", media_type=contentType)
-
 
 if __name__ == "__main__":
     import uvicorn
